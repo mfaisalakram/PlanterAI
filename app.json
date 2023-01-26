@@ -1,0 +1,49 @@
+{
+  "expo": {
+    "name": "planterai",
+    "slug": "planterai",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/planteraiSplashLogo.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/planteraiSplashLogo.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": ["**/*"],
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/planteraiSplashLogo.png",
+        "backgroundColor": "#FFFFFF"
+      },
+      "package": "com.planterai.planterai",
+      "versionCode": 1,
+      "permissions": [
+        "CAMERA",
+        "READ_INTERNAL_STORAGE",
+        "READ_EXTERNAL_STORAGE",
+        "WRITE_EXTERNAL_STORAGE",
+        "android.permission.CAMERA",
+        "android.permission.READ_EXTERNAL_STORAGE",
+        "android.permission.WRITE_EXTERNAL_STORAGE",
+        "android.permission.RECORD_AUDIO"
+      ]
+    },
+    "plugins": [],
+    "web": {
+      "favicon": "./assets/planteraiSplashLogo.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "5725bf0a-32c8-4fd1-81a4-95c6ba8435c5"
+      }
+    }
+  }
+}
