@@ -13,11 +13,19 @@ const Main = () => {
     const navigation = useNavigation();
     return (
         <View style={styles.container}>
-            <View style={styles.buttonView}>
-                <TouchableOpacity style={styles.ButtonNft} onPress={() => { navigation.navigate('QRScanner') }}><Text style={styles.ScanNftText}>Scan QR for NFT's</Text></TouchableOpacity>
+            <View style>
+                <Image
+                    style={styles.mainLogo}
+                    source={require('../../assets/images/planterailogo.png')}
+                />
             </View>
-            <View style={styles.buttonView}>
-                <TouchableOpacity style={styles.ButtonNft} onPress={() => { navigation.navigate('ARScanner') }}><Text style={styles.ScanNftText}>Scan Oled</Text></TouchableOpacity>
+            <View>
+                <View style={styles.buttonView}>
+                    <TouchableOpacity style={styles.ButtonNft} onPress={() => { navigation.navigate('QRScanner') }}><Text style={styles.ScanNftText}>Scan QR for NFT's</Text></TouchableOpacity>
+                </View>
+                <View style={styles.buttonView}>
+                    <TouchableOpacity style={styles.ButtonNft} onPress={() => { navigation.navigate('ARScanner') }}><Text style={styles.ScanNftText}>Scan Oled</Text></TouchableOpacity>
+                </View>
             </View>
         </View>
     );
@@ -29,14 +37,13 @@ const styles = StyleSheet.create({
         flex: 1,
         backgroundColor: '#fff',
         alignItems: 'center',
-        paddingTop: 50,
         justifyContent: 'center'
-
     },
-    logo: {
+    mainLogo: {
         width: 250,
-        height: 100,
-        marginBottom: 50
+        height: 150,
+        marginBottom: 100,
+        resizeMode: 'contain'
     },
     buttonView: {
         marginVertical: 30,
@@ -55,7 +62,7 @@ const styles = StyleSheet.create({
         marginTop: 50,
         textAlign: 'center'
     },
-    ScanNftText: { color: '#000', fontWeight: 'bold', textAlign: 'center', fontSize: 19 },
+    ScanNftText: { color: '#91f860', fontWeight: 'bold', textAlign: 'center', fontSize: 19 },
     ScanOledText: { color: '#000', fontWeight: 'bold', fontSize: 19 },
 
 });

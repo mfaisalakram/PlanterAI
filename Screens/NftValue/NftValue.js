@@ -32,7 +32,7 @@ const NftValue = () => {
     const handelApiCall = async () => {
         try {
             setLoader(true);
-            const response = await axios.get("http://54.234.23.69:4000/channels/mychannel/chaincodes/token_erc721?fcn=ClientMintedNFTs&args='[]'", {
+            const response = await axios.get("http://www.planterai.com:4000/channels/mychannel/chaincodes/token_erc721?fcn=ClientMintedNFTs&args='[]'", {
                 headers: {
                     "Authorization": `Bearer ${authToken}`
                 }
