@@ -53,7 +53,11 @@ const ARScanner = () => {
                 style={StyleSheet.absoluteFillObject}
             />
             {value !== null && <Text style={{ marginTop: 100, color: '#fff', fontSize: 60, color: '#2197f4', width: '90%', textAlign: 'center' }}>{value}</Text>}
-            {scanned && <Button title={'Tap to Scan Again'} onPress={() => { setScanned(false); setValue(null); }} />}
+            {scanned && <View>
+                <Button title={'Tap to Scan Again'} onPress={() => { setScanned(false); setValue(null); }} />
+                {/* <View><Text></Text></View> */}
+                <Button title={'go to Home'} onPress={() => { navigation.goBack(); }} style={styles.backButton} />
+            </View>}
         </View>
     );
 };
@@ -68,5 +72,8 @@ const styles = StyleSheet.create({
         paddingBottom: 80,
         justifyContent: 'space-between'
     },
+    backButton: {
+        margin: 10,
+    }
 
 });

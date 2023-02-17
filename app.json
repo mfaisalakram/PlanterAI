@@ -4,23 +4,26 @@
     "slug": "planterai",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/planteraiSplashLogo.png",
+    "icon": "./assets/icondem.png",
     "userInterfaceStyle": "light",
     "splash": {
-      "image": "./assets/planteraiSplashLogo.png",
+      "image": "./assets/icondem.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
     "updates": {
       "fallbackToCacheTimeout": 0
     },
-    "assetBundlePatterns": ["**/*"],
+    "assetBundlePatterns": [
+      "**/*"
+    ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.planterai.planterai"
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/planteraiSplashLogo.png",
+        "foregroundImage": "./assets/icondem.png",
         "backgroundColor": "#FFFFFF"
       },
       "package": "com.planterai.planterai",
@@ -38,7 +41,7 @@
     },
     "plugins": [],
     "web": {
-      "favicon": "./assets/planteraiSplashLogo.png"
+      "favicon": "./assets/icondem.png"
     },
     "extra": {
       "eas": {
