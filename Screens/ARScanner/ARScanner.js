@@ -56,7 +56,7 @@ const ARScanner = () => {
             {scanned && <View>
                 <Button title={'Tap to Scan Again'} onPress={() => { setScanned(false); setValue(null); }} />
                 {/* <View><Text></Text></View> */}
-                <Button title={'go to Home'} onPress={() => { navigation.goBack(); }} style={styles.backButton} />
+                {/* <Button title={'go to Home'} onPress={() => { navigation.goBack(); }} style={styles.backButton} /> */}
             </View>}
         </View>
     );

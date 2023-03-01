@@ -7,6 +7,7 @@ import OledValues from './OledValues/OledValues';
 import NftValue from './NftValue/NftValue';
 import QRScanner from './QRScanner/QRScanner';
 import ARScanner from './ARScanner/ARScanner';
+import PrivacyPolicies from './PrivacyPolicies/PrivacyPolicies';
 
 const Stack = createStackNavigator();
 
@@ -37,6 +38,11 @@ export default function MainApp() {
         <Stack.Screen
           name="ARScanner"
           component={ARScanner}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="PrivacyPolicies"
+          component={PrivacyPolicies}
           options={{ headerShown: false }}
         />
       </Stack.Navigator>
