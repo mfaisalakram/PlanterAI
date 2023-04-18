@@ -25,9 +25,9 @@ const Main = () => {
                 <View style={styles.buttonView}>
                     <TouchableOpacity style={styles.ButtonNft} onPress={() => { navigation.navigate('QRScanner') }}><Text style={styles.ScanNftText}>Scan QR for NFT's</Text></TouchableOpacity>
                 </View>
-                <View style={styles.buttonView}>
+                {/* <View style={styles.buttonView}>
                     <TouchableOpacity style={styles.ButtonNft} onPress={() => { navigation.navigate('ARScanner') }}><Text style={styles.ScanNftText}>Scan Oled</Text></TouchableOpacity>
-                </View>
+                </View> */}
             </View>
             <View style={styles.PriviciesPolicyView}>
                 <TouchableOpacity style={styles.PriviciesPolicyTouch} onPress={() => { navigation.navigate('PrivacyPolicies') }}>
@@ -38,6 +38,7 @@ const Main = () => {
                 </TouchableOpacity>
             </View>
         </View>
+
     );
 };
 export default Main;

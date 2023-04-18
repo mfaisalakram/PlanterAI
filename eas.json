@@ -3,16 +3,38 @@
     "preview": {
       "android": {
         "buildType": "app-bundle"
+      },
+      "ios": {
+        "resourceClass": "m1-medium"
       }
     },
     "preview2": {
       "android": {
         "gradleCommand": ":app:assembleRelease"
+      },
+      "ios": {
+        "resourceClass": "m1-medium"
       }
     },
     "preview3": {
-      "developmentClient": true
+      "developmentClient": true,
+      "ios": {
+        "resourceClass": "m1-medium"
+      }
     },
-    "production": {}
+    "production": {
+      "ios": {
+        "resourceClass": "m1-medium"
+      }
+    }
+  },
+  "submit": {
+    "production": {
+      "ios": {
+        "appleId": "Support@wolfberryllc.com",
+        "ascAppId": "1672128017",
+        "appleTeamId": "A3957A58QZ"
+      }
+    }
   }
 }

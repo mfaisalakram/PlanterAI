@@ -3,7 +3,8 @@ import {
     StyleSheet,
     View,
     Text,
-    Button
+    Button,
+    TouchableOpacity
 } from 'react-native';
 
 
@@ -40,12 +41,21 @@ const ARScanner = () => {
     };
 
     if (hasPermission === null) {
-        return <Text>Requesting for camera permission</Text>;
+        return <View style={{ flex: 1, justifyContent: 'center', textAlign: 'center', alignItems: 'center' }}>
+            <Text>Requesting for camera permission</Text>
+
+            <TouchableOpacity style={{ marginTop: 20 }} onPress={() => navigation.goBack()}>
+                <Text style={{ color: '#3366CC', fontSize: 14 }}>Go Back Home</Text></TouchableOpacity>
+        </View >;
     }
     if (hasPermission === false) {
-        return <Text>No access to camera</Text>;
-    }
+        return <View style={{ flex: 1, justifyContent: 'center', textAlign: 'center', alignItems: 'center' }}>
+            <Text>No access to camera</Text>
 
+            <TouchableOpacity style={{ marginTop: 20 }} onPress={() => navigation.goBack()}>
+                <Text style={{ color: '#3366CC', fontSize: 14 }}>Go Back Home</Text></TouchableOpacity>
+        </View >;
+    }
     return (
         <View style={styles.container}>
             <BarCodeScanner
@@ -53,10 +63,12 @@ const ARScanner = () => {
                 style={StyleSheet.absoluteFillObject}
             />
             {value !== null && <Text style={{ marginTop: 100, color: '#fff', fontSize: 60, color: '#2197f4', width: '90%', textAlign: 'center' }}>{value}</Text>}
-            {scanned && <View>
+            {scanned ? <View>
                 <Button title={'Tap to Scan Again'} onPress={() => { setScanned(false); setValue(null); }} />
-                {/* <View><Text></Text></View> */}
-                {/* <Button title={'go to Home'} onPress={() => { navigation.goBack(); }} style={styles.backButton} /> */}
+                <View><Text></Text></View>
+                <Button title={'go to Home'} onPress={() => { navigation.goBack(); }} style={styles.backButton} />
+            </View> : <View style={{ flex: 1, justifyContent: 'flex-end' }}>
+                <Button title={'Cancel'} onPress={() => { navigation.goBack(); }} style={styles.backButton} />
             </View>}
         </View>
     );
